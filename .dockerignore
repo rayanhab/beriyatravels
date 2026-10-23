@@ -1,0 +1,8 @@
+.git
+.vscode
+**/node_modules
+**/dist
+beriya-travels/backend/vendor
+beriya-travels/backend/.env
+beriya-travels/backend/database/*.sqlite
+beriya-travels/backend/storage/logs/*.log

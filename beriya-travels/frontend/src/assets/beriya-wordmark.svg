@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 92" role="img" aria-labelledby="title">
+  <title id="title">Beriya Travels</title>
+  <g fill="none" stroke="#111" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke-width="2.7" d="M25 37c-8-3-9-13-2-19 12-10 36-14 58-13 23 1 42 6 54 14 8 5 12 13 9 19-2 5-7 8-15 8H35c-5 0-8-3-10-9z"/>
+    <path stroke-width="1.5" d="M28 35c-5-3-5-10 1-15 11-8 31-12 52-11 22 1 39 6 50 13 7 4 9 10 7 15"/>
+    <path stroke-width="2" d="M45 18c-5-3-5-10 0-13 5-3 11 1 11 6v5"/>
+    <path stroke-width="1.7" d="M34 32c4 6 8 9 13 10m15-10c4 6 8 9 13 10m22-10c-3 6-7 9-13 10"/>
+    <path stroke-width="2.6" d="M30 43v5c0 3 2 4 5 4h91c4 0 6-2 6-5v-4"/>
+    <path stroke-width="1.5" d="M34 47h94"/>
+  </g>
+  <text x="14" y="72" fill="#111" font-family="Arial, sans-serif" font-size="24" font-weight="300" letter-spacing="2.5">BERIYA</text>
+  <text x="15" y="86" fill="#111" font-family="Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="7.1">TRAVELS</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="badge">
+      <circle cx="256" cy="256" r="244"/>
+    </clipPath>
+  </defs>
+  <circle cx="256" cy="256" r="250" fill="#123f34"/>
+  <circle cx="256" cy="256" r="239" fill="#fffefa"/>
+  <g clip-path="url(#badge)">
+    <path fill="#dfe6e0" d="M0 330 86 106l55 177 54-211 60 199 70-197 49 221 58-147 80 210v130H0z"/>
+    <path fill="#aebbb0" d="m28 336 54-171 39 124 31-94 43 141 52-162 42 155 49-109 46 130 43-92 53 148v112H28z"/>
+    <g fill="#718578">
+      <path d="m61 333 39-113 39 113h-22l28 40H53l29-40z"/>
+      <path d="m129 318 44-133 45 133h-25l30 43h-99l29-43z"/>
+      <path d="m301 322 43-130 44 130h-25l29 43h-96l29-43z"/>
+      <path d="m380 335 36-108 38 108h-20l27 38h-83l27-38z"/>
+    </g>
+    <g fill="#294d3c">
+      <path d="m70 344 43-127 45 127h-25l30 45H66l30-45z"/>
+      <path d="m166 338 49-147 50 147h-28l34 51H158l34-51z"/>
+      <path d="m313 341 48-144 49 144h-28l33 49h-106l34-49z"/>
+    </g>
+    <path fill="#d8dfd5" d="M40 390c65-27 135-33 213-26 83-8 158 0 222 29l35 119H10z"/>
+    <g stroke="#101b17" stroke-linecap="round" stroke-linejoin="round">
+      <path fill="#18211d" stroke-width="7" d="m89 328 16-43c6-16 22-26 40-27l173-2c23 0 42 9 57 25l43 48 28 19c11 8 18 20 18 34v28c0 11-9 20-21 20H91c-14 0-24-10-24-24v-46c0-13 8-25 22-32z"/>
+      <path fill="#17231e" stroke-width="6" d="m119 285 15-42c4-12 15-19 28-19h132l-1 76H108z"/>
+      <path fill="#dce5df" stroke-width="5" d="m146 237 18-3h49v60h-76z"/>
+      <path fill="#dce5df" stroke-width="5" d="M222 234h63v60h-63z"/>
+      <path fill="#dce5df" stroke-width="5" d="m292 235 13 1c15 0 27 6 38 18l28 40H292z"/>
+      <path fill="#dce5df" stroke-width="5" d="m362 302-40-59c14 2 25 9 35 19l38 43z"/>
+      <path fill="none" stroke="#e7e9df" stroke-width="4" d="m87 341 145 3v82"/>
+      <path fill="none" stroke="#e7e9df" stroke-width="4" d="M244 344h108"/>
+      <path fill="#fffefa" stroke-width="4" d="m389 320 27 22-9 23-25-4z"/>
+      <path fill="none" stroke="#d9dfd7" stroke-width="3" d="M99 353h69m-72 11h72m-72 11h72m-72 11h72m-72 11h72"/>
+      <path fill="#c68b57" stroke="none" d="M208 315h76v7h-76z"/>
+      <circle cx="135" cy="414" r="35" fill="#101714" stroke="#fffefa" stroke-width="8"/>
+      <circle cx="135" cy="414" r="15" fill="#aebbb0" stroke-width="4"/>
+      <circle cx="365" cy="414" r="35" fill="#101714" stroke="#fffefa" stroke-width="8"/>
+      <circle cx="365" cy="414" r="15" fill="#aebbb0" stroke-width="4"/>
+      <path fill="#fffefa" stroke-width="4" d="M424 365c16 0 25 10 25 23s-9 24-25 24h-8v-47z"/>
+      <path fill="#c68b57" stroke-width="3" d="m75 378 18 3v17l-18-2z"/>
+    </g>
+    <path fill="#101714" stroke="#101714" stroke-linejoin="round" stroke-width="5" d="m193 237 22-40c10-17 25-28 45-31 12-2 26 1 36 9l59 45 28 34-31 15-135-4-39-14z"/>
+    <path fill="none" stroke="#fffefa" stroke-linecap="round" stroke-width="6" d="m227 219 30-28 22 2 35 38m-75 13 38 12 54-7"/>
+    <path fill="#18211d" d="M186 205c18-17 49-26 76-25l-12 16-61 19z"/>
+    <text x="178" y="373" fill="#f4f1e8" font-family="Arial, sans-serif" font-size="35" font-weight="700" letter-spacing="-1.5">beriya</text>
+    <text x="188" y="395" fill="#d2c8c1" font-family="Arial, sans-serif" font-size="14" font-weight="700" letter-spacing="7">TRAVELS</text>
+  </g>
+  <circle cx="256" cy="256" r="239" fill="none" stroke="#d2c7b4" stroke-width="2"/>
+</svg>

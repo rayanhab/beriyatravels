@@ -1,0 +1,23 @@
+/*
+!/.gitignore
+!/.dockerignore
+!/Dockerfile
+!/render.yaml
+!/website v1.html
+!/serve-beriya-static.cjs
+!/deploy/
+/deploy/*
+!/deploy/start.sh
+!/deploy/seed-if-empty.php
+!/beriya-travels/
+/beriya-travels/*
+!/beriya-travels/.gitignore
+!/beriya-travels/README.md
+!/beriya-travels/backend/
+!/beriya-travels/backend/**
+!/beriya-travels/frontend/
+/beriya-travels/frontend/*
+!/beriya-travels/frontend/src/
+/beriya-travels/frontend/src/*
+!/beriya-travels/frontend/src/assets/
+!/beriya-travels/frontend/src/assets/**

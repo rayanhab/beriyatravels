@@ -1,0 +1,2587 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Beriya Travels, votre agence de voyage à Oujda. Découvrez des excursions et séjours au Maroc au départ de l'Oriental.">
+    <meta name="theme-color" content="#173f32">
+    <meta property="og:title" content="Beriya Travels | Escapades au Maroc depuis Oujda">
+    <meta property="og:description" content="Des idées d'escapades au Maroc au départ d'Oujda, avec des prix indicatifs en dirhams.">
+    <title>Beriya Travels | Escapades au Maroc depuis Oujda</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #17352c;
+            --muted: #66756d;
+            --paper: #fbfaf6;
+            --white: #ffffff;
+            --black: #173f32;
+            --header-bg: #fffefa;
+            --topline-bg: #173f32;
+            --accent: #bf6546;
+            --button-bg: #173f32;
+            --button-text: #ffffff;
+            --panel: #f1efe6;
+            --line: #e7e4d9;
+            --shadow: rgba(35, 54, 43, 0.1);
+            --hero-overlay: rgba(0, 0, 0, 0.78);
+            --theme-selected: #173f32;
+            --serif: Georgia, "Times New Roman", serif;
+            --sans: "Segoe UI", Arial, sans-serif;
+        }
+
+        :root[data-theme="dark"] {
+            color-scheme: dark;
+            --ink: #f2f1ee;
+            --muted: #b6b5b1;
+            --paper: #171717;
+            --white: #222222;
+            --black: #080808;
+            --header-bg: #101010;
+            --topline-bg: #050505;
+            --accent: #e7a17d;
+            --button-bg: #f2f1ee;
+            --button-text: #111111;
+            --panel: #202020;
+            --line: #383838;
+            --shadow: rgba(0, 0, 0, 0.28);
+            --hero-overlay: rgba(0, 0, 0, 0.82);
+            --theme-selected: #f2f1ee;
+        }
+
+        :root[data-theme="colorful"] {
+            --ink: #25332e;
+            --muted: #596b62;
+            --paper: #fff9ef;
+            --white: #ffffff;
+            --black: #263a34;
+            --header-bg: #fffdf8;
+            --topline-bg: #31483f;
+            --accent: #c65d3a;
+            --button-bg: #fff2d7;
+            --button-text: #263a34;
+            --panel: #f3e6d3;
+            --line: #ead8c3;
+            --shadow: rgba(66, 49, 30, 0.13);
+            --hero-overlay: rgba(57, 39, 31, 0.75);
+            --theme-selected: #31483f;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            background: var(--paper);
+            color: var(--ink);
+            font-family: var(--sans);
+            line-height: 1.6;
+            transition: background-color 220ms ease, color 220ms ease;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button,
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .shell {
+            width: min(1160px, calc(100% - 48px));
+            margin: 0 auto;
+        }
+
+        .topline {
+            background: var(--topline-bg);
+            color: #ffffff;
+            font-size: 0.82rem;
+            letter-spacing: 0.075em;
+            text-align: center;
+            padding: 9px 16px;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            background: var(--header-bg);
+            border-bottom: 1px solid var(--line);
+            box-shadow: 0 5px 18px var(--shadow);
+        }
+
+        .nav-wrap {
+            min-height: 82px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            display: inline-flex;
+            flex: 0 0 auto;
+            align-items: center;
+            width: 174px;
+            height: 88px;
+            background: transparent;
+        }
+
+        .brand-logo {
+            display: block;
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+            transition: filter 220ms ease;
+        }
+
+        :root[data-theme="dark"] .brand-logo {
+            filter: invert(1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            color: var(--muted);
+            font-size: 0.91rem;
+            font-weight: 600;
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+            color: var(--accent);
+        }
+
+        nav a {
+            position: relative;
+            padding: 8px 0;
+        }
+
+        nav a::after {
+            position: absolute;
+            right: 0;
+            bottom: 2px;
+            left: 0;
+            height: 1px;
+            background: var(--accent);
+            content: "";
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 180ms ease;
+        }
+
+        nav a:hover::after,
+        nav a:focus-visible::after {
+            transform: scaleX(1);
+        }
+
+        .nav-cta,
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 0 23px;
+            border: 0;
+            border-radius: 4px;
+            background: var(--button-bg);
+            color: var(--button-text);
+            font: inherit;
+            font-size: 0.91rem;
+            font-weight: 700;
+            transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+        }
+
+        .nav-cta {
+            background: var(--black);
+            color: #ffffff;
+        }
+
+        .nav-cta:hover,
+        .button:hover {
+            background: var(--line);
+            color: var(--ink);
+            transform: translateY(-1px);
+        }
+
+        .nav-cta:hover {
+            background: var(--accent);
+            color: var(--paper);
+        }
+
+        .hero {
+            position: relative;
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background:
+                linear-gradient(90deg, var(--hero-overlay) 0%, rgba(0, 0, 0, 0.48) 52%, rgba(0, 0, 0, 0.12) 100%),
+                url("https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Jamaa_El_Fna%2C_Marrakesh%2C_Morocco%2C_20250124_1804_7017.jpg/1920px-Jamaa_El_Fna%2C_Marrakesh%2C_Morocco%2C_20250124_1804_7017.jpg") center 52% / cover;
+            color: white;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            width: min(1160px, calc(100% - 48px));
+            margin: 0 auto;
+            padding: 90px 0 112px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 20px;
+            color: var(--black);
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .hero .eyebrow {
+            color: #eeeeeb;
+        }
+
+        .eyebrow::before {
+            width: 25px;
+            height: 1px;
+            background: currentColor;
+            content: "";
+        }
+
+        h1,
+        h2,
+        h3 {
+            line-height: 1.12;
+        }
+
+        .hero h1 {
+            max-width: 690px;
+            font-family: var(--serif);
+            font-size: clamp(3.1rem, 7vw, 5.8rem);
+            font-weight: 500;
+            letter-spacing: -0.055em;
+        }
+
+        .hero h1 em {
+            color: #deded9;
+            font-weight: 500;
+        }
+
+        .hero-copy {
+            max-width: 500px;
+            margin: 25px 0 32px;
+            color: rgba(255, 255, 255, 0.87);
+            font-size: 1.08rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 13px;
+        }
+
+        .button-light {
+            border: 1px solid rgba(255, 255, 255, 0.62);
+            background: rgba(255, 255, 255, 0.09);
+            color: #ffffff;
+        }
+
+        .button-light:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .hero-note {
+            position: absolute;
+            z-index: 2;
+            right: max(24px, calc((100% - 1160px) / 2));
+            bottom: 38px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.77rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .trust-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 27px 0;
+            border-bottom: 1px solid var(--line);
+            background: var(--header-bg);
+        }
+
+        .trust-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 11px;
+            color: var(--muted);
+            font-size: 0.9rem;
+            font-weight: 650;
+        }
+
+        .trust-item + .trust-item {
+            border-left: 1px solid var(--line);
+        }
+
+        .trust-icon {
+            color: var(--accent);
+            font-size: 1.15rem;
+        }
+
+        section {
+            padding: 104px 0;
+        }
+
+        .section-heading {
+            max-width: 660px;
+            margin: 0 auto 48px;
+            text-align: center;
+        }
+
+        .section-heading .eyebrow {
+            justify-content: center;
+        }
+
+        .section-heading h2,
+        .about-copy h2 {
+            font-family: var(--serif);
+            font-size: clamp(2.4rem, 5vw, 3.7rem);
+            font-weight: 500;
+            letter-spacing: -0.045em;
+        }
+
+        .section-heading p {
+            margin-top: 15px;
+            color: var(--muted);
+        }
+
+        .trips {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .trip-card {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: var(--white);
+            box-shadow: 0 5px 18px var(--shadow);
+            transition: transform 220ms ease, box-shadow 220ms ease;
+        }
+
+        .trip-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 38px var(--shadow);
+        }
+
+        .trip-image {
+            position: relative;
+            height: 210px;
+            overflow: hidden;
+            background: var(--line);
+        }
+
+        .trip-image::after {
+            position: absolute;
+            z-index: 1;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 55%;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.22));
+            content: "";
+            pointer-events: none;
+        }
+
+        .trip-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 350ms ease;
+        }
+
+        .trip-card:hover .trip-image > img:first-child {
+            transform: scale(1.045);
+        }
+
+        .van-mascot {
+            position: absolute;
+            z-index: 1;
+            right: max(7%, calc((100% - 1160px) / 2));
+            top: 50%;
+            width: 176px;
+            height: 142px;
+            transform: translateY(-50%);
+            filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.28));
+            pointer-events: none;
+        }
+
+        .van-mascot-badge {
+            fill: #fff9ef;
+            stroke: #ffffff;
+            stroke-width: 3;
+        }
+
+        .van-window {
+            fill: #d7e7e2;
+            stroke: #263a34;
+            stroke-width: 3;
+            stroke-linejoin: round;
+        }
+
+        .van-trim {
+            fill: #c65d3a;
+        }
+
+        .van-cap {
+            fill: #263a34;
+            stroke: #182720;
+            stroke-width: 2;
+            stroke-linejoin: round;
+        }
+
+        .van-wheel {
+            fill: #263a34;
+            stroke: #fff9ef;
+            stroke-width: 3;
+        }
+
+        .van-hub {
+            fill: #d9ad57;
+        }
+
+        .trip-tag {
+            position: absolute;
+            z-index: 3;
+            top: 13px;
+            left: 13px;
+            padding: 6px 11px;
+            border-radius: 3px;
+            background: var(--header-bg);
+            color: var(--ink);
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+
+        .trip-content {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding: 20px 19px 19px;
+        }
+
+        .trip-meta {
+            color: var(--accent);
+            font-size: 0.74rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .trip-content h3 {
+            margin-top: 7px;
+            font-family: var(--serif);
+            font-size: 1.48rem;
+            font-weight: 600;
+        }
+
+        .trip-content p {
+            min-height: 82px;
+            margin-top: 9px;
+            color: var(--muted);
+            font-size: 0.88rem;
+        }
+
+        .trip-includes {
+            min-height: 55px;
+            margin-top: 14px;
+            padding-top: 12px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 0.79rem;
+        }
+
+        .trip-price {
+            display: flex;
+            align-items: baseline;
+            gap: 5px;
+            margin-top: auto;
+            padding-top: 16px;
+        }
+
+        .trip-price strong {
+            color: var(--accent);
+            font-size: 1.58rem;
+            letter-spacing: -0.04em;
+        }
+
+        .trip-price span {
+            color: var(--muted);
+            font-size: 0.77rem;
+        }
+
+        .price-note {
+            max-width: 850px;
+            margin: 27px auto 0;
+            padding: 15px 20px;
+            border-top: 1px solid var(--line);
+            border-bottom: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 0.78rem;
+            text-align: center;
+        }
+
+        .about {
+            background: var(--panel);
+        }
+
+        .about-layout {
+            display: grid;
+            grid-template-columns: 1fr 0.9fr;
+            align-items: center;
+            gap: 82px;
+        }
+
+        .about-copy .eyebrow {
+            margin-bottom: 17px;
+        }
+
+        .about-copy p {
+            margin-top: 17px;
+            color: var(--muted);
+        }
+
+        .about-points {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 28px;
+        }
+
+        .about-point {
+            padding: 15px;
+            border: 1px solid var(--line);
+            border-radius: 4px;
+            background: var(--header-bg);
+            color: var(--ink);
+            font-size: 0.86rem;
+            font-weight: 700;
+        }
+
+        .about-point span {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        .about-photo {
+            position: relative;
+            min-height: 460px;
+            border-radius: 8px 110px 8px 8px;
+            background: url("https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Oujda_architecture_001.JPG/960px-Oujda_architecture_001.JPG") center / cover;
+            box-shadow: 14px 14px 0 var(--header-bg);
+        }
+
+        .location-card {
+            position: absolute;
+            right: -19px;
+            bottom: 24px;
+            padding: 18px 22px;
+            border-radius: 5px;
+            background: var(--white);
+            box-shadow: 0 12px 30px var(--shadow);
+        }
+
+        .location-card small {
+            display: block;
+            color: var(--muted);
+            font-size: 0.73rem;
+            text-transform: uppercase;
+        }
+
+        .location-card strong {
+            color: var(--ink);
+            font-family: var(--serif);
+            font-size: 1.4rem;
+        }
+
+        .cta {
+            padding: 92px 0;
+            background: var(--black);
+            color: white;
+            text-align: center;
+        }
+
+        .cta .eyebrow {
+            color: #deded9;
+        }
+
+        .cta h2 {
+            max-width: 700px;
+            margin: 0 auto;
+            font-family: var(--serif);
+            font-size: clamp(2.5rem, 5vw, 3.8rem);
+            font-weight: 500;
+            letter-spacing: -0.045em;
+        }
+
+        .cta p {
+            max-width: 540px;
+            margin: 15px auto 25px;
+            color: rgba(255, 255, 255, 0.77);
+        }
+
+        .cta .button {
+            background: var(--button-bg);
+            color: var(--button-text);
+        }
+
+        .cta .button:hover {
+            background: var(--line);
+        }
+
+        .booking-section,
+        .contact-form-section {
+            padding: 88px 0;
+            background: var(--panel);
+        }
+
+        .booking-layout,
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 0.82fr 1fr;
+            align-items: center;
+            gap: clamp(34px, 7vw, 82px);
+        }
+
+        .booking-intro h2,
+        .contact-intro h2 {
+            font-family: var(--serif);
+            font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+            font-weight: 500;
+            letter-spacing: -0.045em;
+            line-height: 1.08;
+        }
+
+        .booking-intro > p,
+        .contact-intro > p {
+            margin-top: 15px;
+            color: var(--muted);
+        }
+
+        .booking-steps {
+            display: grid;
+            gap: 15px;
+            margin-top: 27px;
+            list-style: none;
+        }
+
+        .booking-steps li {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+            color: var(--ink);
+            font-size: 0.87rem;
+            font-weight: 700;
+        }
+
+        .booking-steps li > span {
+            color: var(--accent);
+            font-family: var(--serif);
+            font-size: 1.25rem;
+        }
+
+        .booking-steps small {
+            display: block;
+            color: var(--muted);
+            font-size: 0.75rem;
+            font-weight: 400;
+        }
+
+        .api-form {
+            display: grid;
+            gap: 15px;
+            padding: clamp(22px, 4vw, 36px);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: var(--header-bg);
+            box-shadow: 0 12px 36px var(--shadow);
+        }
+
+        .api-form h3 {
+            font-family: var(--serif);
+            font-size: 1.65rem;
+            font-weight: 500;
+        }
+
+        .api-form label {
+            display: grid;
+            gap: 6px;
+            color: var(--ink);
+            font-size: 0.79rem;
+            font-weight: 700;
+        }
+
+        .api-form label > span {
+            color: var(--accent);
+        }
+
+        .api-form input,
+        .api-form select,
+        .api-form textarea {
+            width: 100%;
+            min-height: 45px;
+            padding: 10px 12px;
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            background: var(--paper);
+            color: var(--ink);
+            font: inherit;
+            font-size: 0.85rem;
+        }
+
+        .api-form textarea {
+            min-height: 88px;
+            resize: vertical;
+        }
+
+        .api-form input:focus,
+        .api-form select:focus,
+        .api-form textarea:focus {
+            outline: 3px solid color-mix(in srgb, var(--accent) 22%, transparent);
+            border-color: var(--accent);
+        }
+
+        .api-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 13px;
+        }
+
+        .api-status {
+            min-height: 1.3em;
+            color: var(--muted);
+            font-size: 0.79rem;
+        }
+
+        .api-status.error {
+            color: #a82e27;
+        }
+
+        .api-status.success {
+            padding: 12px;
+            border: 1px solid color-mix(in srgb, #267341 25%, var(--line));
+            border-radius: 8px;
+            background: color-mix(in srgb, #267341 7%, var(--header-bg));
+            color: var(--ink);
+            line-height: 1.6;
+        }
+
+        .trip-booking {
+            width: 100%;
+            margin-top: 16px;
+            border-radius: 999px;
+        }
+
+        .availability-section {
+            padding: 92px 0;
+            background: var(--panel);
+        }
+
+        .calendar-heading {
+            margin-bottom: 34px;
+        }
+
+        .availability-layout {
+            display: grid;
+            grid-template-columns: minmax(290px, 0.8fr) minmax(0, 1.2fr);
+            align-items: start;
+            gap: 26px;
+        }
+
+        .availability-calendar,
+        .departure-result-card {
+            padding: clamp(20px, 3vw, 30px);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            background: var(--header-bg);
+            box-shadow: 0 8px 28px var(--shadow);
+        }
+
+        .availability-toolbar,
+        .availability-results-heading {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .availability-toolbar {
+            margin-bottom: 20px;
+        }
+
+        .availability-toolbar h3,
+        .availability-results-heading h3 {
+            color: var(--ink);
+            font-family: var(--serif);
+            font-size: 1.45rem;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+        .calendar-arrow {
+            display: grid;
+            width: 38px;
+            height: 38px;
+            place-items: center;
+            border: 1px solid var(--line);
+            border-radius: 50%;
+            background: var(--paper);
+            color: var(--ink);
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .calendar-filter {
+            display: grid;
+            gap: 6px;
+            margin-bottom: 16px;
+            color: var(--muted);
+            font-size: 0.72rem;
+            font-weight: 700;
+        }
+
+        .calendar-filter select {
+            width: 100%;
+            min-height: 42px;
+            padding: 8px 10px;
+            border: 1px solid var(--line);
+            border-radius: 7px;
+            background: var(--paper);
+            color: var(--ink);
+            font: inherit;
+        }
+
+        .availability-grid {
+            display: grid;
+            grid-template-columns: repeat(7, minmax(0, 1fr));
+            gap: 5px;
+        }
+
+        .availability-weekdays {
+            margin-bottom: 6px;
+            color: var(--muted);
+            font-size: 0.68rem;
+            font-weight: 750;
+            text-align: center;
+        }
+
+        .availability-weekdays span {
+            padding: 5px 0;
+        }
+
+        .availability-day {
+            position: relative;
+            display: grid;
+            min-width: 0;
+            min-height: 42px;
+            place-items: center;
+            border: 1px solid transparent;
+            border-radius: 8px;
+            background: transparent;
+            color: var(--ink);
+            cursor: pointer;
+            font: inherit;
+            font-size: 0.8rem;
+        }
+
+        .availability-day:hover {
+            border-color: var(--line);
+            background: var(--paper);
+        }
+
+        .availability-day.outside-month {
+            color: var(--muted);
+            opacity: 0.5;
+        }
+
+        .availability-day.has-departure {
+            background: color-mix(in srgb, var(--accent) 12%, var(--header-bg));
+            color: var(--ink);
+            font-weight: 800;
+        }
+
+        .availability-day.has-departure::after {
+            position: absolute;
+            bottom: 4px;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--accent);
+            content: "";
+        }
+
+        .availability-day.selected {
+            border-color: var(--black);
+            background: var(--black);
+            color: #ffffff;
+            opacity: 1;
+        }
+
+        .calendar-legend {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 17px;
+            padding-top: 14px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 0.68rem;
+        }
+
+        .calendar-legend span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .availability-results {
+            display: grid;
+            gap: 13px;
+        }
+
+        .availability-results-heading {
+            padding: 4px 2px 7px;
+        }
+
+        .availability-results-heading .eyebrow {
+            margin-bottom: 6px;
+        }
+
+        .departure-count {
+            color: var(--muted);
+            font-size: 0.72rem;
+        }
+
+        .departure-result-card {
+            padding: 21px;
+        }
+
+        .departure-result-top {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .departure-result-top small {
+            color: var(--accent);
+            font-size: 0.65rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .departure-result-top h4 {
+            margin-top: 4px;
+            color: var(--ink);
+            font-family: var(--serif);
+            font-size: 1.45rem;
+            font-weight: 500;
+        }
+
+        .departure-result-price {
+            color: var(--accent);
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        .departure-result-card > p {
+            margin-top: 9px;
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        .departure-result-card .departure-note {
+            font-size: 0.69rem;
+        }
+
+        .departure-program {
+            margin-top: 13px;
+            padding-top: 12px;
+            border-top: 1px solid var(--line);
+        }
+
+        .departure-program summary {
+            color: var(--black);
+            cursor: pointer;
+            font-size: 0.77rem;
+            font-weight: 750;
+        }
+
+        .departure-program ol {
+            display: grid;
+            gap: 10px;
+            margin: 13px 0 0;
+            list-style: none;
+        }
+
+        .departure-program li {
+            display: grid;
+            grid-template-columns: minmax(88px, 0.35fr) 1fr;
+            gap: 12px;
+            font-size: 0.72rem;
+        }
+
+        .departure-program li > span {
+            color: var(--accent);
+            font-weight: 750;
+        }
+
+        .departure-program li strong,
+        .departure-program li small {
+            display: block;
+        }
+
+        .departure-program li small {
+            margin-top: 2px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .departure-select {
+            width: 100%;
+            margin-top: 16px;
+        }
+
+        .availability-empty {
+            padding: 22px;
+            border: 1px dashed var(--line);
+            border-radius: 10px;
+            color: var(--muted);
+            font-size: 0.82rem;
+            line-height: 1.7;
+        }
+
+        footer {
+            padding: 27px 0;
+            color: var(--muted);
+            font-size: 0.82rem;
+        }
+
+        .photo-credits {
+            margin-top: 14px;
+            padding-top: 13px;
+            border-top: 1px solid var(--line);
+            font-size: 0.7rem;
+            line-height: 1.8;
+        }
+
+        .photo-credits a {
+            color: var(--ink);
+            text-decoration: underline;
+            text-decoration-color: var(--line);
+            text-underline-offset: 2px;
+        }
+
+        .photo-credits a:hover {
+            text-decoration-color: currentColor;
+        }
+
+        .footer-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-brand {
+            color: var(--ink);
+            font-weight: 800;
+            letter-spacing: 0.04em;
+        }
+
+        :focus-visible {
+            outline: 3px solid var(--accent);
+            outline-offset: 4px;
+        }
+
+        .header-actions {
+            display: flex;
+            flex: 0 0 auto;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .theme-switcher {
+            display: inline-flex;
+            align-items: center;
+            gap: 3px;
+            padding: 4px;
+            border: 1px solid var(--line);
+            border-radius: 5px;
+            background: var(--paper);
+        }
+
+        .theme-option {
+            display: inline-flex;
+            min-height: 34px;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            padding: 0 9px;
+            border: 0;
+            border-radius: 3px;
+            background: transparent;
+            color: var(--muted);
+            cursor: pointer;
+            font: inherit;
+            font-size: 0.75rem;
+            font-weight: 650;
+            transition: background 160ms ease, color 160ms ease;
+        }
+
+        .theme-option:hover {
+            color: var(--ink);
+        }
+
+        .theme-option[aria-pressed="true"] {
+            background: var(--theme-selected);
+            color: var(--paper);
+        }
+
+        .theme-symbol {
+            font-size: 0.92rem;
+            line-height: 1;
+        }
+
+        .theme-label {
+            display: inline;
+        }
+
+        :root[data-theme="colorful"] .topline {
+            background: linear-gradient(90deg, #31483f, #75553e, #31483f);
+        }
+
+        :root[data-theme="colorful"] .nav-cta {
+            background: #c65d3a;
+            color: #ffffff;
+        }
+
+        :root[data-theme="colorful"] .nav-cta:hover {
+            background: #a84b2d;
+        }
+
+        :root[data-theme="colorful"] .cta {
+            background: #31483f;
+        }
+
+        :root[data-theme="colorful"] .cta .button {
+            background: #f2bd69;
+            color: #263a34;
+        }
+
+        :root[data-theme="colorful"] .cta .button:hover {
+            background: #f7d79f;
+        }
+
+        :root[data-theme="colorful"] .trip-card:nth-child(3n + 1) .trip-tag {
+            background: #f4d6a1;
+        }
+
+        :root[data-theme="colorful"] .trip-card:nth-child(3n + 2) .trip-tag {
+            background: #d9e7dd;
+        }
+
+        :root[data-theme="colorful"] .trip-card:nth-child(3n) .trip-tag {
+            background: #f0d8ce;
+        }
+
+        :root[data-theme="colorful"] .trust-icon {
+            color: #c65d3a;
+        }
+
+        :root[data-theme="colorful"] .trip-price strong,
+        :root[data-theme="colorful"] .location-card strong {
+            color: #31483f;
+        }
+
+        :root[data-theme="dark"] .hero .eyebrow,
+        :root[data-theme="dark"] .hero h1 em,
+        :root[data-theme="dark"] .cta .eyebrow {
+            color: #e6e5e0;
+        }
+
+        @media (max-width: 960px) {
+            .header-actions {
+                margin-left: auto;
+            }
+
+            .nav-wrap {
+                flex-wrap: wrap;
+                gap: 0 16px;
+                padding-bottom: 10px;
+            }
+
+            nav {
+                order: 3;
+                flex-basis: 100%;
+                padding-top: 8px;
+                border-top: 1px solid var(--line);
+            }
+
+            nav ul {
+                justify-content: center;
+            }
+
+            .trips {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .about-layout {
+                gap: 42px;
+            }
+
+            .booking-layout,
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .availability-layout {
+                grid-template-columns: 1fr;
+            }
+            .hero {
+                min-height: 570px;
+            }
+
+            .van-mascot {
+                right: 24px;
+                top: auto;
+                bottom: 58px;
+                width: 138px;
+                height: 112px;
+                transform: none;
+            }
+        }
+
+        .topline {
+            padding: 8px 16px;
+            background: #173f32;
+            font-size: 0.72rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        header {
+            box-shadow: 0 8px 26px rgba(26, 49, 39, 0.045);
+        }
+
+        .nav-wrap {
+            min-height: 76px;
+        }
+
+        .brand {
+            width: 174px;
+            height: 76px;
+        }
+
+        .brand-logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        :root[data-theme="dark"] .brand-logo {
+            filter: invert(1);
+        }
+
+        .nav-cta,
+        .button {
+            border-radius: 999px;
+        }
+
+        .hero {
+            min-height: 670px;
+            display: block;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse at 0% 10%, rgba(231, 211, 170, 0.32), transparent 40%),
+                var(--paper);
+            color: var(--ink);
+        }
+
+        .hero-layout {
+            position: relative;
+            z-index: 1;
+            min-height: 630px;
+            display: grid;
+            grid-template-columns: 0.94fr 1.06fr;
+            align-items: center;
+            gap: clamp(36px, 7vw, 90px);
+            padding-top: 38px;
+            padding-bottom: 54px;
+        }
+
+        .hero-copy {
+            max-width: 590px;
+            margin: 0;
+            color: var(--ink);
+        }
+
+        .hero .eyebrow {
+            margin-bottom: 23px;
+            color: var(--accent);
+        }
+
+        .hero h1 {
+            max-width: 570px;
+            font-family: var(--serif);
+            font-size: clamp(3.5rem, 6.2vw, 5.8rem);
+            font-weight: 500;
+            letter-spacing: -0.065em;
+            line-height: 0.99;
+        }
+
+        .hero h1 em {
+            display: block;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .hero-copy-text {
+            max-width: 480px;
+            margin: 25px 0 29px;
+            color: var(--muted);
+            font-size: 1.04rem;
+        }
+
+        .hero-actions {
+            gap: 22px;
+        }
+
+        .hero-primary {
+            min-height: 54px;
+            gap: 12px;
+            padding: 0 25px;
+            background: #173f32;
+            color: #ffffff;
+            box-shadow: 0 10px 22px rgba(23, 63, 50, 0.16);
+        }
+
+        .hero-primary:hover {
+            background: #235844;
+            color: #ffffff;
+        }
+
+        .hero-link {
+            color: var(--ink);
+            font-size: 0.91rem;
+            font-weight: 700;
+        }
+
+        .hero-link span {
+            padding-left: 5px;
+            color: var(--accent);
+        }
+
+        .hero-proof {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 21px;
+            margin-top: 38px;
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        .hero-proof i {
+            margin-right: 5px;
+            color: var(--accent);
+            font-style: normal;
+        }
+
+        .hero-visual {
+            position: relative;
+            min-height: 490px;
+            overflow: visible;
+            border-radius: 48% 48% 18px 18px;
+            background: linear-gradient(145deg, #d9e4d8, #b4c5b5);
+            box-shadow: 0 28px 68px rgba(32, 53, 43, 0.16);
+        }
+
+        .hero-photo {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: inherit;
+            object-fit: cover;
+            object-position: center 52%;
+        }
+
+        .hero-photo-caption {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1;
+            display: grid;
+            gap: 3px;
+            padding: 18px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.46);
+            border-radius: 12px;
+            background: rgba(255, 253, 246, 0.91);
+            color: #17352c;
+            backdrop-filter: blur(12px);
+        }
+
+        .hero-photo-caption small {
+            color: #69766e;
+            font-size: 0.68rem;
+            letter-spacing: 0.11em;
+            text-transform: uppercase;
+        }
+
+        .hero-photo-caption strong {
+            font-family: var(--serif);
+            font-size: 1.35rem;
+            font-weight: 500;
+        }
+
+        .hero-photo-caption > span {
+            position: absolute;
+            right: 19px;
+            bottom: 20px;
+            color: #69766e;
+            font-size: 0.76rem;
+        }
+
+        .hero-signature {
+            position: absolute;
+            z-index: 2;
+            top: 14px;
+            right: 14px;
+            width: 38px;
+            height: 38px;
+            filter: drop-shadow(0 2px 5px rgba(20, 32, 25, 0.2));
+        }
+
+        .hero-stamp {
+            position: absolute;
+            top: 75px;
+            left: -35px;
+            z-index: 1;
+            width: 110px;
+            height: 110px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+            border: 1px solid rgba(23, 63, 50, 0.2);
+            border-radius: 50%;
+            background: #f4ead4;
+            color: #173f32;
+            font-size: 0.55rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-align: center;
+            transform: rotate(-9deg);
+        }
+
+        .hero-stamp b {
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+
+        .scroll-cue {
+            position: absolute;
+            bottom: 18px;
+            left: max(24px, calc((100% - 1160px) / 2));
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--accent);
+            font-size: 1.1rem;
+        }
+
+        .scroll-cue span {
+            color: var(--muted);
+            font-size: 0.72rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .trust-strip {
+            position: relative;
+            z-index: 1;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            margin-top: -1px;
+            padding: 28px 0;
+        }
+
+        .trust-item {
+            justify-content: flex-start;
+            gap: 14px;
+            padding: 0 24px;
+            color: var(--ink);
+        }
+
+        .trust-number {
+            color: var(--accent);
+            font-family: var(--serif);
+            font-size: 1.7rem;
+        }
+
+        .trust-item strong,
+        .trust-item small {
+            display: block;
+        }
+
+        .trust-item strong {
+            font-size: 0.88rem;
+        }
+
+        .trust-item small {
+            margin-top: 2px;
+            color: var(--muted);
+            font-size: 0.73rem;
+            font-weight: 400;
+        }
+
+        section:not(.hero) {
+            padding-top: 96px;
+            padding-bottom: 96px;
+        }
+
+        .section-heading {
+            margin-bottom: 42px;
+        }
+
+        .section-heading h2,
+        .about-copy h2 {
+            font-size: clamp(2.5rem, 4.7vw, 3.7rem);
+        }
+
+        .trips {
+            gap: 20px;
+        }
+
+        .trip-card {
+            border-color: var(--line);
+            border-radius: 14px;
+            box-shadow: 0 8px 28px rgba(35, 54, 43, 0.07);
+        }
+
+        .trip-image {
+            height: 225px;
+        }
+
+        .trip-image img.trip-signature {
+            position: absolute;
+            z-index: 2;
+            top: 10px;
+            right: 10px;
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.22));
+        }
+
+        .trip-tag {
+            border-radius: 999px;
+            padding: 7px 12px;
+        }
+
+        .trip-content {
+            padding: 21px 20px 20px;
+        }
+
+        .about-point,
+        .location-card {
+            border-radius: 12px;
+        }
+
+        .about-photo {
+            border-radius: 14px 110px 14px 14px;
+        }
+
+        .about-signature {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            width: 38px;
+            height: 38px;
+            filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.22));
+        }
+
+        .cta {
+            background:
+                radial-gradient(ellipse at 50% -20%, rgba(91, 133, 103, 0.55), transparent 58%),
+                #173f32;
+        }
+
+        .cta .button {
+            border-radius: 999px;
+        }
+
+        footer {
+            background: var(--header-bg);
+        }
+
+        @media (max-width: 960px) {
+            .hero-layout {
+                min-height: 600px;
+                gap: 36px;
+            }
+
+            .hero-visual {
+                min-height: 420px;
+            }
+
+            .hero-stamp {
+                left: -23px;
+                width: 92px;
+                height: 92px;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .hero {
+                min-height: 0;
+            }
+
+            .hero-layout {
+                min-height: 0;
+                grid-template-columns: 1fr;
+                gap: 34px;
+                padding-top: 55px;
+                padding-bottom: 70px;
+            }
+
+            .hero h1 {
+                font-size: clamp(3.4rem, 15vw, 5rem);
+            }
+
+            .hero-copy-text {
+                margin: 19px 0 24px;
+            }
+
+            .hero-proof {
+                margin-top: 25px;
+            }
+
+            .hero-visual {
+                min-height: 390px;
+                margin: 0 14px;
+            }
+
+            .hero-signature {
+                top: 12px;
+                right: 12px;
+                width: 36px;
+                height: 36px;
+            }
+
+            .hero-stamp {
+                top: 50px;
+                left: -23px;
+            }
+
+            .scroll-cue {
+                display: none;
+            }
+
+            .trust-strip {
+                grid-template-columns: 1fr;
+                gap: 17px;
+                padding: 22px 0;
+            }
+
+            .trust-item {
+                padding: 0;
+                border: 0 !important;
+            }
+
+            section:not(.hero) {
+                padding-top: 72px;
+                padding-bottom: 72px;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .shell,
+            .hero-content {
+                width: min(100% - 36px, 520px);
+            }
+
+            .nav-wrap {
+                min-height: 0;
+                gap: 0 12px;
+            }
+
+            .brand {
+                width: 142px;
+                height: 72px;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .theme-option {
+                width: 32px;
+                min-height: 32px;
+                padding: 0;
+            }
+
+            .theme-label {
+                display: none;
+            }
+
+            nav {
+                order: 3;
+                flex-basis: 100%;
+                padding-top: 4px;
+            }
+
+            nav ul {
+                justify-content: space-between;
+                gap: 12px;
+                padding: 0 3px;
+                font-size: 0.82rem;
+            }
+
+            .hero {
+                min-height: 590px;
+                background-position: 58% center;
+            }
+
+            .hero-content {
+                padding: 76px 0 100px;
+            }
+
+            .hero h1 {
+                max-width: 520px;
+                font-size: clamp(3rem, 13.3vw, 4.6rem);
+            }
+
+            .hero-copy {
+                font-size: 0.98rem;
+            }
+
+            .hero-note {
+                right: 18px;
+                bottom: 20px;
+                font-size: 0.65rem;
+            }
+
+            .trust-strip {
+                grid-template-columns: 1fr;
+                gap: 14px;
+                padding: 20px 0;
+            }
+
+            .trust-item {
+                justify-content: flex-start;
+            }
+
+            .trust-item + .trust-item {
+                border-left: 0;
+            }
+
+            section {
+                padding: 76px 0;
+            }
+
+            .section-heading {
+                margin-bottom: 30px;
+                text-align: left;
+            }
+
+            .section-heading .eyebrow {
+                justify-content: flex-start;
+            }
+
+            .trips {
+                grid-template-columns: 1fr;
+            }
+
+            .trip-image {
+                height: 235px;
+            }
+
+            .trip-content p,
+            .trip-includes {
+                min-height: 0;
+            }
+
+            .about-layout {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .api-form .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .about-photo {
+                min-height: 330px;
+                margin-right: 12px;
+                box-shadow: 9px 9px 0 var(--header-bg);
+            }
+
+            .location-card {
+                right: -12px;
+            }
+
+            .footer-inner {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="topline">Votre prochaine escapade commence ici — départs depuis Oujda</div>
+    <header>
+        <div class="shell nav-wrap">
+            <a class="brand" href="#accueil" aria-label="Beriya Travels, accueil">
+                <img class="brand-logo" src="beriya-travels/frontend/src/assets/beriya-wordmark.svg" alt="Beriya Travels">
+            </a>
+            <nav aria-label="Navigation principale">
+                <ul>
+                    <li><a href="#calendar">Calendrier</a></li>
+                    <li><a href="#circuits">Nos voyages</a></li>
+                    <li><a href="#agence">L'agence</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <div class="theme-switcher" role="group" aria-label="Choisir le thème">
+                    <button class="theme-option" type="button" data-theme-choice="light" aria-label="Activer le thème clair" aria-pressed="true" title="Thème clair">
+                        <span class="theme-symbol" aria-hidden="true">☼</span><span class="theme-label">Clair</span>
+                    </button>
+                    <button class="theme-option" type="button" data-theme-choice="dark" aria-label="Activer le thème sombre" aria-pressed="false" title="Thème sombre">
+                        <span class="theme-symbol" aria-hidden="true">◐</span><span class="theme-label">Sombre</span>
+                    </button>
+                    <button class="theme-option" type="button" data-theme-choice="colorful" aria-label="Activer le thème coloré" aria-pressed="false" title="Thème coloré">
+                        <span class="theme-symbol" aria-hidden="true">✿</span><span class="theme-label">Coloré</span>
+                    </button>
+                </div>
+                <a class="nav-cta" href="#reservation">Réserver <span aria-hidden="true">&nbsp;↗</span></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="accueil" aria-labelledby="hero-title">
+            <div class="shell hero-layout">
+                <div class="hero-copy">
+                    <div class="eyebrow">Agence de voyage · Oujda</div>
+                    <h1 id="hero-title">Le Maroc vous attend <em>juste ici.</em></h1>
+                    <p class="hero-copy-text">Une journée au bord de la mer, un week-end dans une médina, un peu plus loin que d'habitude. Choisissez votre prochaine échappée au départ de l'Oriental.</p>
+                    <div class="hero-actions">
+                        <a class="button hero-primary" href="#circuits">Explorer les escapades <span aria-hidden="true">→</span></a>
+                        <a class="hero-link" href="#agence">Découvrir Beriya <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="hero-proof">
+                        <span><i aria-hidden="true">⌖</i> Départ depuis Oujda</span>
+                        <span><i aria-hidden="true">◇</i> Prix en dirhams</span>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img class="hero-photo" src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Jamaa_El_Fna%2C_Marrakesh%2C_Morocco%2C_20250124_1804_7017.jpg/960px-Jamaa_El_Fna%2C_Marrakesh%2C_Morocco%2C_20250124_1804_7017.jpg" alt="La place Jemaa el-Fna à Marrakech, une idée d'escapade au Maroc" fetchpriority="high">
+                    <div class="hero-photo-caption"><small>Une destination parmi tant d'autres</small><strong>Marrakech, à votre rythme.</strong><span>⌖ Maroc</span></div>
+                    <img class="hero-signature" src="beriya-travels/frontend/src/assets/beriya-signature.svg" alt="Beriya Travels">
+                    <div class="hero-stamp" aria-hidden="true"><span>LE MAROC</span><b>♡</b><span>À PORTÉE DE ROUTE</span></div>
+                </div>
+            </div>
+            <a class="scroll-cue" href="#circuits">↓ <span>Faites défiler pour explorer</span></a>
+        </section>
+
+        <div class="shell trust-strip" aria-label="Les engagements Beriya Travels">
+            <div class="trust-item"><span class="trust-number">01</span><span><strong>Au départ d'Oujda</strong><small>L'Oriental comme point de départ</small></span></div>
+            <div class="trust-item"><span class="trust-number">02</span><span><strong>Des prix lisibles</strong><small>En dirhams, sans détour</small></span></div>
+            <div class="trust-item"><span class="trust-number">03</span><span><strong>À votre mesure</strong><small>Une journée ou quelques jours</small></span></div>
+        </div>
+
+        <section id="circuits">
+            <div class="shell">
+                <div class="section-heading">
+                    <div class="eyebrow">Nos idées d'évasion</div>
+                    <h2>Tout près ou un peu plus loin.</h2>
+                    <p>Des formats simples pour partir depuis Oujda, respirer ailleurs et profiter du voyage.</p>
+                </div>
+                <p class="api-status" id="catalogue-status" role="status" aria-live="polite">Les demandes de réservation vérifient les offres actives auprès de l'agence.</p>
+
+                <div class="trips">
+                    <article class="trip-card">
+                        <div class="trip-image">
+                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/6/62/Saidia_MOROCCO_BEACH.jpg/960px-Saidia_MOROCCO_BEACH.jpg" alt="Plage de Saïdia, sur la côte méditerranéenne du Maroc" loading="lazy">
+                            <img class="trip-signature" src="beriya-travels/frontend/src/assets/beriya-signature.svg" alt="" aria-hidden="true">
+                            <span class="trip-tag">Une journée</span>
+                        </div>
+                        <div class="trip-content">
+                            <div class="trip-meta">Mer & détente</div>
+                            <h3>Saïdia Express</h3>
+                            <p>Une journée iodée sur la côte, avec du temps libre pour la plage et la marina.</p>
+                            <div class="trip-includes">Transport aller-retour en groupe · Départ d'Oujda</div>
+                            <div class="trip-price"><strong>199 DH</strong><span>/ personne · à partir de</span></div>
+                            <button class="button trip-booking" type="button" data-offer-title="Saïdia Express" disabled>Demander ce voyage</button>
+                        </div>
+                    </article>
+
+                    <article class="trip-card">
+                        <div class="trip-image">
+                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fd/Lagune_Marchica.jpg/960px-Lagune_Marchica.jpg" alt="Lagune Marchica, près de Nador, dans la région de l'Oriental" loading="lazy">
+                            <img class="trip-signature" src="beriya-travels/frontend/src/assets/beriya-signature.svg" alt="" aria-hidden="true">
+                            <span class="trip-tag">Une journée</span>
+                        </div>
+                        <div class="trip-content">
+                            <div class="trip-meta">Nature & lagune</div>
+                            <h3>Nador & Marchica</h3>
+                            <p>Cap sur la lagune, ses panoramas et l'ambiance du littoral de l'Oriental.</p>
+                            <div class="trip-includes">Transport aller-retour en groupe · Temps libre</div>
+                            <div class="trip-price"><strong>249 DH</strong><span>/ personne · à partir de</span></div>
+                            <button class="button trip-booking" type="button" data-offer-title="Nador &amp; Marchica" disabled>Demander ce voyage</button>
+                        </div>
+                    </article>
+
+                    <article class="trip-card">
+                        <div class="trip-image">
+                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7c/Looking_Upon_The_Medina_in_Fes%2C_Morocco.jpg/960px-Looking_Upon_The_Medina_in_Fes%2C_Morocco.jpg" alt="Vue sur la médina historique de Fès" loading="lazy">
+                            <img class="trip-signature" src="beriya-travels/frontend/src/assets/beriya-signature.svg" alt="" aria-hidden="true">
+                            <span class="trip-tag">2 jours · 1 nuit</span>
+                        </div>
+                        <div class="trip-content">
+                            <div class="trip-meta">Culture & médina</div>
+                            <h3>Week-end à Fès</h3>
+                            <p>Deux jours pour flâner dans la médina, goûter aux spécialités et changer d'air.</p>
+                            <div class="trip-includes">Transport A/R · 1 nuit · Petit-déjeuner · Chambre double</div>
+                            <div class="trip-price"><strong>890 DH</strong><span>/ personne · à partir de</span></div>
+                            <button class="button trip-booking" type="button" data-offer-title="Week-end à Fès" disabled>Demander ce voyage</button>
+                        </div>
+                    </article>
+
+                    <article class="trip-card">
+                        <div class="trip-image">
+                            <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7a/Jamaa_El_Fna%2C_Marrakesh%2C_Morocco%2C_20250124_1804_7017.jpg/960px-Jamaa_El_Fna%2C_Marrakesh%2C_Morocco%2C_20250124_1804_7017.jpg" alt="Place Jemaa el-Fna, au cœur de Marrakech" loading="lazy">
+                            <img class="trip-signature" src="beriya-travels/frontend/src/assets/beriya-signature.svg" alt="" aria-hidden="true">
+                            <span class="trip-tag">3 jours · 2 nuits</span>
+                        </div>
+                        <div class="trip-content">
+                            <div class="trip-meta">Grand circuit</div>
+                            <h3>Marrakech découverte</h3>
+                            <p>La ville rouge, ses jardins et ses places emblématiques, le temps d'une vraie parenthèse.</p>
+                            <div class="trip-includes">Transport A/R · 2 nuits · Petits-déjeuners · Chambre double</div>
+                            <div class="trip-price"><strong>2 190 DH</strong><span>/ personne · à partir de</span></div>
+                            <button class="button trip-booking" type="button" data-offer-title="Marrakech découverte" disabled>Demander ce voyage</button>
+                        </div>
+                     
+                    </article>
+                </div>
+                <p class="price-note">Prix indicatifs par personne, en dirhams marocains (MAD), en chambre double pour les séjours. Tarifs de lancement à confirmer selon les dates, la saison, la disponibilité et la taille du groupe. Repas non mentionnés, visites et dépenses personnelles non inclus. Les prix définitifs sont communiqués avant toute réservation.</p>
+            </div>
+        </section>
+
+        <section class="about" id="agence">
+            <div class="shell about-layout">
+                <div class="about-copy">
+                    <div class="eyebrow">L'esprit Beriya</div>
+                    <h2>Partir d'ici, découvrir plus.</h2>
+                    <p>Beriya Travels imagine des voyages accessibles au départ d'Oujda, pour les curieux, les familles et les amis qui ont envie de prendre la route.</p>
+                    <p>Notre idée est simple : des itinéraires inspirants, un programme facile à comprendre et un prix annoncé sans surprise. Choisissez une escapade ou demandez un circuit adapté à vos envies.</p>
+                    <div class="about-points">
+                        <div class="about-point"><span aria-hidden="true">⌖</span>Une agence ancrée à Oujda</div>
+                        <div class="about-point"><span aria-hidden="true">♡</span>Des séjours pensés pour vous</div>
+                    </div>
+                </div>
+                <div class="about-photo" role="img" aria-label="Architecture historique de la ville d'Oujda, avec un voyageur en manteau long">
+                    <img class="about-signature" src="beriya-travels/frontend/src/assets/beriya-signature.svg" alt="" aria-hidden="true">
+                    <div class="location-card">
+                        <small>Notre point de départ</small>
+                        <strong>Oujda, Maroc</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="availability-section" id="calendar">
+            <div class="shell">
+                <div class="section-heading calendar-heading">
+                    <div class="eyebrow">Le calendrier des départs</div>
+                    <h2>Choisissez votre date de voyage.</h2>
+                    <p>Sélectionnez une date proposée pour découvrir les voyages et leur programme.</p>
+                </div>
+                <div class="availability-layout">
+                    <div class="availability-calendar">
+                        <div class="availability-toolbar">
+                            <button class="calendar-arrow" id="calendar-prev" type="button" aria-label="Mois précédent">←</button>
+                            <h3 id="calendar-month-label"></h3>
+                            <button class="calendar-arrow" id="calendar-next" type="button" aria-label="Mois suivant">→</button>
+                        </div>
+                        <label class="calendar-filter">Activité
+                            <select id="calendar-offer-filter">
+                                <option value="">Toutes les escapades</option>
+                            </select>
+                        </label>
+                        <div class="availability-grid availability-weekdays" aria-hidden="true">
+                            <span>Lu</span><span>Ma</span><span>Me</span><span>Je</span><span>Ve</span><span>Sa</span><span>Di</span>
+                        </div>
+                        <div class="availability-grid" id="calendar-days" role="group" aria-label="Choisir un jour"></div>
+                        <div class="calendar-legend"><span aria-hidden="true"></span> Départ(s) proposé(s) · confirmation par l'agence</div>
+                    </div>
+                    <div class="availability-results">
+                        <div class="availability-results-heading">
+                            <div><div class="eyebrow">Votre sélection</div><h3 id="selected-date-title"></h3></div>
+                            <span id="selected-date-count"></span>
+                        </div>
+                        <p class="api-status" id="departures-status" role="status" aria-live="polite">Chargement du calendrier…</p>
+                        <div id="departure-results"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="booking-section" id="reservation">
+            <div class="shell booking-layout">
+                <div class="booking-intro">
+                    <div class="eyebrow">On s'occupe de la suite</div>
+                    <h2>Votre prochaine histoire commence par un message.</h2>
+                    <p>Choisissez une escapade et indiquez-nous vos dates. Votre demande sera enregistrée et l'agence vous recontactera pour confirmer le tarif et la disponibilité.</p>
+                    <ol class="booking-steps">
+                        <li><span>01</span><div>Choisissez votre séjour<small>Une destination et vos dates idéales.</small></div></li>
+                        <li><span>02</span><div>Envoyez votre demande<small>Quelques informations suffisent.</small></div></li>
+                        <li><span>03</span><div>On confirme ensemble<small>Sans paiement ni engagement à cette étape.</small></div></li>
+                    </ol>
+                </div>
+                <form class="api-form" id="reservation-form">
+                    <div><div class="eyebrow">Votre demande</div><h3>Parlons de votre escapade.</h3></div>
+                    <p class="api-status" id="offers-status" role="status">Connexion au catalogue des voyages…</p>
+                    <label>Escapade souhaitée <span aria-hidden="true">*</span>
+                        <select name="offer_id" id="offer-id" required>
+                            <option value="" selected disabled>Chargement des escapades…</option>
+                        </select>
+                    </label>
+                    <label>Nom complet <span aria-hidden="true">*</span><input name="full_name" required minlength="2" maxlength="120" autocomplete="name" placeholder="Votre nom"></label>
+                    <div class="form-row">
+                        <label>E-mail <span aria-hidden="true">*</span><input name="email" type="email" required maxlength="160" autocomplete="email" placeholder="vous@exemple.com"></label>
+                        <label>Téléphone<input name="phone" type="tel" maxlength="30" autocomplete="tel" placeholder="+212 …"></label>
+                    </div>
+                    <div class="form-row">
+                        <label>Voyageurs <span aria-hidden="true">*</span><input name="travelers" type="number" required min="1" max="9" value="1"></label>
+                        <label>Date de départ sélectionnée <span aria-hidden="true">*</span><input name="departure_date" type="date" required readonly placeholder="Choisissez une date dans le calendrier"></label>
+                    </div>
+                    <label>Un détail à partager ?<textarea name="message" maxlength="1000" rows="3" placeholder="Vos envies, questions ou préférences…"></textarea></label>
+                    <p class="api-status" id="reservation-status" role="status" aria-live="polite"></p>
+                    <input name="departure_id" id="departure-id" type="hidden" required>
+                    <button class="button" id="reservation-submit" type="submit" disabled>Envoyer ma demande <span aria-hidden="true">→</span></button>
+                    <small>Prix indicatif. Aucune place n'est confirmée avant le retour de l'agence.</small>
+                </form>
+            </div>
+        </section>
+
+        <section class="contact-form-section" id="contact">
+            <div class="shell contact-layout">
+                <div class="contact-intro">
+                    <div class="eyebrow">Une question ?</div>
+                    <h2>Écrivons la suite ensemble.</h2>
+                    <p>Une question sur les voyages, un projet de groupe ou une demande particulière ? Envoyez votre message directement à l'agence.</p>
+                </div>
+                <form class="api-form" id="contact-form">
+                    <h3>Contactez Beriya Travels</h3>
+                    <label>Nom complet <span aria-hidden="true">*</span><input name="full_name" required minlength="2" maxlength="120" autocomplete="name" placeholder="Votre nom"></label>
+                    <label>E-mail <span aria-hidden="true">*</span><input name="email" type="email" required maxlength="160" autocomplete="email" placeholder="vous@exemple.com"></label>
+                    <label>Sujet <span aria-hidden="true">*</span><input name="subject" required minlength="3" maxlength="160" placeholder="Comment pouvons-nous vous aider ?"></label>
+                    <label>Votre message <span aria-hidden="true">*</span><textarea name="message" required minlength="10" maxlength="3000" rows="4" placeholder="Écrivez-nous quelques mots…"></textarea></label>
+                    <p class="api-status" id="contact-status" role="status" aria-live="polite"></p>
+                    <button class="button" id="contact-submit" type="submit">Envoyer le message <span aria-hidden="true">→</span></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="shell footer-inner">
+            <div class="footer-brand">Beriya Travels</div>
+            <div>Agence de voyage · Oujda, Maroc</div>
+            <div>© 2026 Beriya Travels</div>
+        </div>
+        <div class="shell photo-credits">
+            Photos : <a href="https://commons.wikimedia.org/wiki/File:Saidia_MOROCCO_BEACH.jpg" target="_blank" rel="noreferrer">Saïdia — Youssef Aouni (CC BY-SA 4.0)</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:Lagune_Marchica.jpg" target="_blank" rel="noreferrer">Marchica — Houssain Tork (CC BY-SA 4.0)</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:Looking_Upon_The_Medina_in_Fes,_Morocco.jpg" target="_blank" rel="noreferrer">Fès — Sim Br (CC BY-SA 2.0)</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:Jamaa_El_Fna,_Marrakesh,_Morocco,_20250124_1804_7017.jpg" target="_blank" rel="noreferrer">Marrakech — Jakub Hałun (CC BY 4.0)</a> ·
+            <a href="https://commons.wikimedia.org/wiki/File:Oujda_architecture_001.JPG" target="_blank" rel="noreferrer">Oujda — Moonik (CC BY-SA 3.0)</a>.
+        </div>
+    </footer>
+    <script>
+        const isLocalDevelopment = window.location.protocol === "file:"
+            || ["localhost", "127.0.0.1"].includes(window.location.hostname);
+        const API_BASE_URL = isLocalDevelopment
+            ? "http://localhost:8000/api"
+            : `${window.location.origin}/api`;
+        const allowedApiOrigins = new Set([
+            "http://localhost:4200",
+            "http://localhost:5500",
+            "http://127.0.0.1:5500"
+        ]);
+
+        function apiConnectionMessage() {
+            if (window.location.protocol === "file:") {
+                return "Cette page est ouverte directement depuis un fichier et son origine n’est pas autorisée. Ouvrez-la depuis http://localhost:5500/, puis vérifiez que Laravel fonctionne sur localhost:8000.";
+            }
+            if (allowedApiOrigins.has(window.location.origin)) {
+                return "Impossible de joindre l’API Laravel sur localhost:8000. Démarrez Laravel avec php artisan serve et vérifiez sa connexion à la base de données.";
+            }
+            return `Impossible de joindre l’API Laravel depuis ${window.location.origin}. Démarrez Laravel sur localhost:8000 et autorisez cette origine dans la configuration CORS.`;
+        }
+
+        const reservationForm = document.getElementById("reservation-form");
+        const offerSelect = document.getElementById("offer-id");
+        const reservationStatus = document.getElementById("reservation-status");
+        const reservationSubmit = document.getElementById("reservation-submit");
+        const offersStatus = document.getElementById("offers-status");
+        const contactForm = document.getElementById("contact-form");
+        const calendarFilter = document.getElementById("calendar-offer-filter");
+        const calendarDays = document.getElementById("calendar-days");
+        const departuresStatus = document.getElementById("departures-status");
+        const departureResults = document.getElementById("departure-results");
+        const selectedDateTitle = document.getElementById("selected-date-title");
+        const selectedDateCount = document.getElementById("selected-date-count");
+        const departureIdInput = document.getElementById("departure-id");
+        let scheduledDepartures = [];
+        let selectedCalendarDate = "";
+        let visibleCalendarMonth = dateKey(new Date()).slice(0, 7);
+        let departuresRequestId = 0;
+
+        function setApiStatus(element, message, kind = "") {
+            element.textContent = message;
+            element.classList.toggle("error", kind === "error");
+            element.classList.toggle("success", kind === "success");
+        }
+
+        function validationMessage(payload, fallback) {
+            if (payload && payload.errors && typeof payload.errors === "object") {
+                const firstError = Object.values(payload.errors).flat()[0];
+                if (typeof firstError === "string") return firstError;
+            }
+            return typeof payload?.message === "string" ? payload.message : fallback;
+        }
+
+        function formatMad(amount) {
+            return new Intl.NumberFormat("fr-MA", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2
+            }).format(Number(amount));
+        }
+
+        function dateKey(date) {
+            return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}-${String(date.getDate()).padStart(2, "0")}`;
+        }
+
+        function localizedDate(value, options = { weekday: "long", day: "numeric", month: "long", year: "numeric" }) {
+            return new Intl.DateTimeFormat("fr-FR", options).format(new Date(`${value}T12:00:00`));
+        }
+
+        function filteredDepartures() {
+            const offerId = calendarFilter.value;
+            return scheduledDepartures.filter(departure => !offerId || String(departure.offer_id) === offerId);
+        }
+
+        function renderSelectedDepartures() {
+            const matches = filteredDepartures().filter(departure => departure.departure_date === selectedCalendarDate);
+            selectedDateTitle.textContent = selectedCalendarDate ? localizedDate(selectedCalendarDate) : "Choisissez une date";
+            selectedDateCount.textContent = matches.length ? `${matches.length} voyage${matches.length > 1 ? "s" : ""}` : "";
+            departureResults.replaceChildren();
+
+            if (!matches.length) {
+                const empty = document.createElement("p");
+                empty.className = "availability-empty";
+                empty.textContent = "Aucun départ proposé pour cette date. Choisissez un jour marqué dans le calendrier.";
+                departureResults.append(empty);
+                return;
+            }
+
+            matches.forEach(departure => {
+                const card = document.createElement("article");
+                card.className = "departure-result-card";
+                const top = document.createElement("div");
+                top.className = "departure-result-top";
+                const titleGroup = document.createElement("div");
+                const category = document.createElement("small");
+                category.textContent = departure.offer.category;
+                const title = document.createElement("h4");
+                title.textContent = departure.offer.destination.name;
+                titleGroup.append(category, title);
+                const price = document.createElement("strong");
+                price.className = "departure-result-price";
+                price.textContent = `${formatMad(departure.offer.price_mad)} DH / pers.`;
+                top.append(titleGroup, price);
+
+                const summary = document.createElement("p");
+                summary.textContent = departure.offer.summary;
+                const duration = document.createElement("p");
+                duration.textContent = `${departure.offer.duration}${departure.return_date && departure.return_date !== departure.departure_date ? ` · Retour ${localizedDate(departure.return_date, { day: "numeric", month: "long" })}` : ""}`;
+                const note = document.createElement("p");
+                note.className = "departure-note";
+                note.textContent = departure.note || "Date proposée, départ et disponibilité à confirmer par l’agence.";
+
+                const details = document.createElement("details");
+                details.className = "departure-program";
+                const summaryToggle = document.createElement("summary");
+                summaryToggle.textContent = "Voir le programme du voyage";
+                const itinerary = document.createElement("ol");
+                (departure.offer.program || []).forEach(activity => {
+                    const row = document.createElement("li");
+                    const time = document.createElement("span");
+                    time.textContent = `${activity.day} · ${activity.time}`;
+                    const description = document.createElement("div");
+                    const activityTitle = document.createElement("strong");
+                    activityTitle.textContent = activity.title;
+                    const activityDetail = document.createElement("small");
+                    activityDetail.textContent = activity.detail;
+                    description.append(activityTitle, activityDetail);
+                    row.append(time, description);
+                    itinerary.append(row);
+                });
+                details.append(summaryToggle, itinerary);
+
+                const choose = document.createElement("button");
+                choose.type = "button";
+                choose.className = "button departure-select";
+                choose.textContent = "Choisir ce départ →";
+                choose.addEventListener("click", () => {
+                    offerSelect.value = String(departure.offer_id);
+                    reservationForm.elements.departure_date.value = departure.departure_date;
+                    departureIdInput.value = String(departure.id);
+                    reservationSubmit.disabled = false;
+                    setApiStatus(reservationStatus, `Départ sélectionné : ${localizedDate(departure.departure_date)} · ${departure.offer.title}.`);
+                    document.getElementById("reservation").scrollIntoView({ behavior: "smooth" });
+                });
+
+                card.append(top, summary, duration, note, details, choose);
+                departureResults.append(card);
+            });
+        }
+
+        function renderCalendar() {
+            const [year, month] = visibleCalendarMonth.split("-").map(Number);
+            const firstDay = new Date(year, month - 1, 1);
+            const mondayOffset = (firstDay.getDay() + 6) % 7;
+            const gridStart = new Date(year, month - 1, 1 - mondayOffset);
+            const labelDate = new Date(year, month - 1, 1);
+            document.getElementById("calendar-month-label").textContent = new Intl.DateTimeFormat("fr-FR", {
+                month: "long",
+                year: "numeric"
+            }).format(labelDate);
+
+            const counts = new Map();
+            filteredDepartures().forEach(departure => {
+                counts.set(departure.departure_date, (counts.get(departure.departure_date) || 0) + 1);
+            });
+            calendarDays.replaceChildren();
+            for (let index = 0; index < 42; index++) {
+                const day = new Date(gridStart.getFullYear(), gridStart.getMonth(), gridStart.getDate() + index);
+                const key = dateKey(day);
+                const count = counts.get(key) || 0;
+                const button = document.createElement("button");
+                button.type = "button";
+                button.className = "availability-day";
+                button.textContent = String(day.getDate());
+                button.setAttribute("aria-pressed", String(key === selectedCalendarDate));
+                button.setAttribute("aria-label", `${localizedDate(key, { weekday: "long", day: "numeric", month: "long" })}${count ? `, ${count} départs proposés` : ", aucun départ proposé"}`);
+                if (day.getMonth() !== month - 1) button.classList.add("outside-month");
+                if (count) button.classList.add("has-departure");
+                if (key === selectedCalendarDate) button.classList.add("selected");
+                button.addEventListener("click", () => {
+                    selectedCalendarDate = key;
+                    renderCalendar();
+                    renderSelectedDepartures();
+                });
+                calendarDays.append(button);
+            }
+            renderSelectedDepartures();
+        }
+
+        async function loadDepartures(month) {
+            const requestId = ++departuresRequestId;
+            visibleCalendarMonth = month;
+            setApiStatus(departuresStatus, "Chargement des départs proposés…");
+            try {
+                const response = await fetch(`${API_BASE_URL}/departures?month=${encodeURIComponent(month)}`, {
+                    headers: { Accept: "application/json" }
+                });
+                const departures = await response.json();
+                if (!response.ok) throw new Error(validationMessage(departures, "Impossible de charger les départs."));
+                if (requestId !== departuresRequestId) return;
+                scheduledDepartures = departures;
+                if (!departures.some(departure => departure.departure_date === selectedCalendarDate)) {
+                    selectedCalendarDate = filteredDepartures()[0]?.departure_date || `${month}-01`;
+                }
+                setApiStatus(
+                    departuresStatus,
+                    "Dates proposées par l’agence · chaque départ reste à confirmer."
+                );
+                renderCalendar();
+            } catch (error) {
+                if (requestId !== departuresRequestId) return;
+                console.error("Beriya Travels could not load scheduled departures.", error);
+                scheduledDepartures = [];
+                setApiStatus(
+                    departuresStatus,
+                    error instanceof TypeError
+                        ? apiConnectionMessage()
+                        : error.message,
+                    "error"
+                );
+                renderCalendar();
+            }
+        }
+
+        document.getElementById("calendar-prev").addEventListener("click", () => {
+            const [year, month] = visibleCalendarMonth.split("-").map(Number);
+            const previous = new Date(year, month - 2, 1);
+            loadDepartures(`${previous.getFullYear()}-${String(previous.getMonth() + 1).padStart(2, "0")}`);
+        });
+        document.getElementById("calendar-next").addEventListener("click", () => {
+            const [year, month] = visibleCalendarMonth.split("-").map(Number);
+            const next = new Date(year, month, 1);
+            loadDepartures(`${next.getFullYear()}-${String(next.getMonth() + 1).padStart(2, "0")}`);
+        });
+        calendarFilter.addEventListener("change", () => {
+            const firstMatch = filteredDepartures()[0];
+            if (firstMatch && !filteredDepartures().some(departure => departure.departure_date === selectedCalendarDate)) {
+                selectedCalendarDate = firstMatch.departure_date;
+            }
+            renderCalendar();
+        });
+
+        async function loadOffers() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/offers`, {
+                    headers: { Accept: "application/json" }
+                });
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                const offers = await response.json();
+                if (!Array.isArray(offers) || offers.length === 0) {
+                    throw new Error("Aucune escapade active n’est disponible.");
+                }
+
+                offerSelect.replaceChildren(new Option("Choisir une escapade", "", true, true));
+                offerSelect.options[0].disabled = true;
+                offers.forEach(offer => {
+                    offerSelect.add(new Option(
+                        `${offer.title} — ${formatMad(offer.price_mad)} DH / personne`,
+                        String(offer.id)
+                    ));
+                    calendarFilter.add(new Option(offer.title, String(offer.id)));
+                });
+
+                document.querySelectorAll(".trip-booking").forEach(button => {
+                    const offer = offers.find(item => item.title === button.dataset.offerTitle);
+                    if (offer) {
+                        button.dataset.offerId = String(offer.id);
+                        button.disabled = false;
+                        const price = button.closest(".trip-card")?.querySelector(".trip-price strong");
+                        if (price) price.textContent = `${formatMad(offer.price_mad)} DH`;
+                    }
+                });
+
+                setApiStatus(offersStatus, "Escapades disponibles — tarifs indicatifs à confirmer.");
+                setApiStatus(
+                    document.getElementById("catalogue-status"),
+                    "Les offres et tarifs sont chargés depuis le serveur Beriya Travels."
+                );
+            } catch (error) {
+                console.error("Beriya Travels could not load the API offers.", error);
+                offerSelect.replaceChildren(new Option("Catalogue indisponible", "", true, true));
+                reservationSubmit.disabled = true;
+                setApiStatus(
+                    offersStatus,
+                    apiConnectionMessage(),
+                    "error"
+                );
+                setApiStatus(
+                    document.getElementById("catalogue-status"),
+                    "Le catalogue en ligne n'est pas disponible pour le moment. Les tarifs affichés sont indicatifs.",
+                    "error"
+                );
+            }
+        }
+
+        document.querySelectorAll(".trip-booking").forEach(button => {
+            button.addEventListener("click", () => {
+                calendarFilter.value = button.dataset.offerId || "";
+                calendarFilter.dispatchEvent(new Event("change"));
+                document.getElementById("calendar").scrollIntoView({ behavior: "smooth" });
+            });
+        });
+
+        offerSelect.addEventListener("change", () => {
+            reservationForm.elements.departure_date.value = "";
+            departureIdInput.value = "";
+            reservationSubmit.disabled = true;
+        });
+
+        reservationForm.addEventListener("submit", async event => {
+            event.preventDefault();
+            if (!reservationForm.reportValidity()) return;
+
+            reservationSubmit.disabled = true;
+            setApiStatus(reservationStatus, "Envoi de votre demande…");
+            const formData = new FormData(reservationForm);
+            const payload = Object.fromEntries(formData.entries());
+            payload.offer_id = Number(payload.offer_id);
+            payload.departure_id = Number(payload.departure_id);
+            payload.travelers = Number(payload.travelers);
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/reservations`, {
+                    method: "POST",
+                    headers: { Accept: "application/json", "Content-Type": "application/json" },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                if (!response.ok) {
+                    throw new Error(validationMessage(result, "La demande n’a pas pu être envoyée."));
+                }
+                setApiStatus(
+                    reservationStatus,
+                    `${result.message} Référence : ${result.booking_reference}. Estimation pour ${result.travelers} voyageur(s) : ${formatMad(result.estimated_total_mad)} DH (${formatMad(result.price_per_traveler_mad)} DH / personne). Tarif final et disponibilité à confirmer par l’agence.`,
+                    "success"
+                );
+                reservationForm.reset();
+                reservationSubmit.disabled = true;
+            } catch (error) {
+                console.error("Beriya Travels could not submit the booking request.", error);
+                setApiStatus(
+                    reservationStatus,
+                    error instanceof TypeError
+                        ? apiConnectionMessage()
+                        : error.message,
+                    "error"
+                );
+            } finally {
+                reservationSubmit.disabled = !departureIdInput.value || offerSelect.options.length < 2;
+            }
+        });
+
+        contactForm.addEventListener("submit", async event => {
+            event.preventDefault();
+            if (!contactForm.reportValidity()) return;
+
+            const submitButton = document.getElementById("contact-submit");
+            const status = document.getElementById("contact-status");
+            submitButton.disabled = true;
+            setApiStatus(status, "Envoi de votre message…");
+
+            try {
+                const payload = Object.fromEntries(new FormData(contactForm).entries());
+                const response = await fetch(`${API_BASE_URL}/contact`, {
+                    method: "POST",
+                    headers: { Accept: "application/json", "Content-Type": "application/json" },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+                if (!response.ok) {
+                    throw new Error(validationMessage(result, "Votre message n’a pas pu être envoyé."));
+                }
+                setApiStatus(status, result.message, "success");
+                contactForm.reset();
+            } catch (error) {
+                console.error("Beriya Travels could not submit the contact message.", error);
+                setApiStatus(
+                    status,
+                    error instanceof TypeError
+                        ? apiConnectionMessage()
+                        : error.message,
+                    "error"
+                );
+            } finally {
+                submitButton.disabled = false;
+            }
+        });
+
+        const initialCalendarMonth = visibleCalendarMonth;
+        loadOffers();
+        loadDepartures(initialCalendarMonth);
+    </script>
+
+    <script>
+        const themes = ["light", "dark", "colorful"];
+        const themeButtons = Array.from(document.querySelectorAll("[data-theme-choice]"));
+        const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+
+        function applyTheme(theme) {
+            if (!themes.includes(theme)) {
+                throw new Error(`Unknown Beriya Travels theme: ${theme}`);
+            }
+
+            document.documentElement.dataset.theme = theme;
+            themeButtons.forEach(button => {
+                button.setAttribute("aria-pressed", String(button.dataset.themeChoice === theme));
+            });
+            themeColorMeta.setAttribute("content", theme === "dark" ? "#171717" : theme === "colorful" ? "#fff9ef" : "#111111");
+        }
+
+        let savedTheme = null;
+        try {
+            savedTheme = window.localStorage.getItem("beriya-travels-theme");
+        } catch (error) {
+            console.warn("Beriya Travels could not read the saved theme preference.", error);
+        }
+
+        applyTheme(themes.includes(savedTheme) ? savedTheme : "light");
+
+        themeButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const selectedTheme = button.dataset.themeChoice;
+                applyTheme(selectedTheme);
+
+                try {
+                    window.localStorage.setItem("beriya-travels-theme", selectedTheme);
+                } catch (error) {
+                    console.warn("Beriya Travels could not save the theme preference.", error);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
